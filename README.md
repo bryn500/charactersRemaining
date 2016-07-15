@@ -23,15 +23,15 @@ jQuery('textarea').charactersRemaining();
 
 ```javascript
 $('input').charactersRemaining({
-	className:  'charRemaining',
-	singleCharacterText: '## character remaining',
-        multipleCharacterText: '## characters remaining'
+    className:  'charRemaining',
+    singleCharacterText: '## character remaining',
+    multipleCharacterText: '## characters remaining'
 });
 ```
 
 Attribute		| Type		| Default		        | Description
 ---			| ---		| ---				| ---
 `className`		| *string*	| `charRemaining`		| Classname to apply to new element containing chracter count.
-`singleCharacterText`	| *string*	| ` character remaining`	| Text to display when there is only 1 character left
-`multipleCharacterText`	| *string*	| ` character remaining`	| Text to display when there is not 1 character left
+`singleCharacterText`	| *string*	| `## character remaining`	| Text to display when there is only 1 character left
+`multipleCharacterText`	| *string*	| `## characters remaining`	| Text to display when there is not 1 character left
 
