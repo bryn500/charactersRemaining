@@ -23,11 +23,11 @@ jQuery('textarea').charactersRemaining();
 
 ```javascript
 $('input').charactersRemaining({
-	className:  'remaing'
+	className:  'charRemaining'
 });
 ```
 
-Attribute			| Type				| Default		        | Description
----						| ---					| ---				        | ---
+Attribute		| Type			| Default		        | Description
+---			| ---			| ---				| ---
 `className`		| *string*		| `charRemaining`		| Classname to apply to new element containing chracter count.
 
