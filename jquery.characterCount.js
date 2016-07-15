@@ -13,10 +13,17 @@
 
         function charactersRemaining(textarea) {
             var textContent = textarea.val(),
+                newLines = textContent.match(/(\r\n|\n|\r)/g),
                 maxCharacters = parseInt(textarea.attr('maxlength'), 10),
                 characters = textContent.length,
-                remaining = maxCharacters - characters,
-                charMessage = textarea.next('.' + settings.className);
+                charMessage = textarea.next('.' + settings.className),
+                remaining;
+
+            if (newLines != null) {
+                characters += newLines.length;
+            }
+
+            remaining = maxCharacters - characters;
 
             if (remaining === 1) {
                 charMessage.text(settings.singleCharacterText.replace('##', remaining));
