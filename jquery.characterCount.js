@@ -19,7 +19,7 @@
                 charMessage = textarea.next('.' + settings.className),
                 remaining;
 
-            if (newLines != null) {
+            if (newLines !== null) {
                 characters += newLines.length;
             }
 
