@@ -7,8 +7,8 @@
             settings = $.extend({
                 // defaults
                 className: 'charRemaining',
-                singleCharacterText: ' character remaining',
-                multipleCharacterText: ' characters remaining'
+                singleCharacterText: '## character remaining',
+                multipleCharacterText: '## characters remaining'
             }, options);
 
         function charactersRemaining(textarea) {
@@ -19,9 +19,9 @@
                 charMessage = textarea.next('.' + settings.className);
 
             if (remaining === 1) {
-                charMessage.text(remaining + settings.singleCharacterText);
+                charMessage.text(settings.singleCharacterText.replace('##', remaining));
             } else {
-                charMessage.text(remaining + settings.multipleCharacterText);
+                charMessage.text(settings.multipleCharacterText.replace('##', remaining));
             }
         }
 
