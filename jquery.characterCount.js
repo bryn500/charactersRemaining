@@ -1,4 +1,4 @@
-﻿/* globals jQuery */
+/* globals jQuery */
 (function ($) {
     'use strict';
 
@@ -6,22 +6,24 @@
         var self = this,
             settings = $.extend({
                 // defaults
-                className: 'charRemaining'
+                className: 'charRemaining',
+                singleCharacterText: ' character remaining',
+                multipleCharacterText: ' characters remaining'
             }, options);
 
         function charactersRemaining(textarea) {
             var textContent = textarea.val(),
                 maxCharacters = parseInt(textarea.attr('maxlength'), 10),
                 characters = textContent.length,
-                charactersRemaining = maxCharacters - characters,
+                remaining = maxCharacters - characters,
                 charMessage = textarea.next('.' + settings.className);
 
-            if (charactersRemaining === 1) {
-                charMessage.text(charactersRemaining + ' character remaining');
+            if (remaining === 1) {
+                charMessage.text(remaining + settings.singleCharacterText);
             } else {
-                charMessage.text(charactersRemaining + ' characters remaining');
+                charMessage.text(remaining + settings.multipleCharacterText);
             }
-        }                
+        }
 
         (function init() {
             self.bind('input selectionchange propertychange', function (event) {
@@ -37,7 +39,7 @@
                 }
 
                 charactersRemaining($(value));
-            })
+            });
         }());
 
         return self;
