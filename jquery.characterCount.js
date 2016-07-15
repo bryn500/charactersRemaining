@@ -2,7 +2,7 @@
 (function ($) {
     'use strict';
 
-    $.fn.characterCount = function (options) {
+    $.fn.charactersRemaining = function (options) {
         var self = this,
             settings = $.extend({
                 // defaults
