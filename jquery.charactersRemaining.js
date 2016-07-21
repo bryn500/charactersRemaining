@@ -33,7 +33,7 @@
         }
 
         (function init() {
-            self.bind('input selectionchange propertychange', function (event) {
+            self.on('input selectionchange propertychange', function (event) {
                 var that = $(event.currentTarget);
                 charactersRemaining(that);
             });
