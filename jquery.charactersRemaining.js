@@ -48,7 +48,8 @@
                 charactersRemaining($(value));
             });
         }());
-
+        
+        // Chainable
         return self;
     };
 }(jQuery));
