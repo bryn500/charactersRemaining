@@ -7,11 +7,11 @@ Show characters remaining on an html input with a maxlength
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="jquery.charactersRemaining.js"></script>
 </head>
 <body>
 <textarea maxlength="100"></textarea>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="jquery.charactersRemaining.js"></script>
 <script>
 jQuery('textarea').charactersRemaining();
 </script>
